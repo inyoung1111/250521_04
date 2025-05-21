@@ -3,6 +3,14 @@
 var key = 185;
 var num = num;
 
+var  update = function(){
+	console.log('')
+	var height = document.querySelector()
+	height.innerText = key + 'CM';
+	
+}
+
+
 /*
 	
 
