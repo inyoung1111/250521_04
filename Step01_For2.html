@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step01_For2.html</title>
 </head>
+
 <body>
     <div>div1</div>
     <div>div2</div>
@@ -17,39 +19,52 @@
     <div>div9</div>
     <div>div10</div>
     <div>div11</div>
-    <div>div12</div>
-    <div>div13</div>
     <button id="changBtn">CHANGE</button>
     <button id="changBtn2">CHANGE2</button>
     <script>
         document.querySelector('#changBtn')
+            .addEventListener('click', function () {
+                //모든 div의 innerText를 '짱구'로 바꿔보세요.
+                document.querySelectorAll('div')[0].innerText = '짱구';
+                document.querySelectorAll('div')[1].innerText = '짱구';
+                document.querySelectorAll('div')[2].innerText = '짱구';
+                document.querySelectorAll('div')[3].innerText = '짱구';
+                document.querySelectorAll('div')[4].innerText = '짱구';
+                document.querySelectorAll('div')[5].innerText = '짱구';
+                document.querySelectorAll('div')[6].innerText = '짱구';
+                document.querySelectorAll('div')[7].innerText = '짱구';
+                document.querySelectorAll('div')[8].innerText = '짱구';
+                document.querySelectorAll('div')[9].innerText = '짱구';
+                document.querySelectorAll('div')[10].innerText = '짱구';
+
+                for (var i=0; i<11; i++){
+            document.querySelectorAll('div')[i].innerText = '짱구';
+        
+        }
+});
+
+        document.querySelector('#changBtn2')
         .addEventListener('click', function(){
-            //모든 div의 innerText를 '짱구'로 바꿔보세요.
-            document.querySelectorAll('div')[0].innerText = '짱구';
-            document.querySelectorAll('div')[1].innerText = '짱구';
-            document.querySelectorAll('div')[2].innerText = '짱구';
-            document.querySelectorAll('div')[3].innerText = '짱구';
-            document.querySelectorAll('div')[4].innerText = '짱구';
-            document.querySelectorAll('div')[5].innerText = '짱구';
-            document.querySelectorAll('div')[6].innerText = '짱구';
-            document.querySelectorAll('div')[7].innerText = '짱구';
-            document.querySelectorAll('div')[8].innerText = '짱구';
-            document.querySelectorAll('div')[9].innerText = '짱구';
-            document.querySelectorAll('div')[10].innerText = '짱구';
-    
-           
+            var divs = document.querySelectorAll('div');
+            console.log('divs');
+            for (var i =0; i<divs.length; i++){
+                document.querySelectorAll('div')[i].innerText = '짱구';
+            }
+            
         });
-      for( var i=0; i<11; i++){
-        document.querySelectorAll('div')[i].innerText ='짱구';
-    }
-    document.querySelector('changBtn2')
-    .addEventListener('click',function){
-        var divs = document.querySelectorAll('div');
-        console.log();
-        for
-    }
+        
+        // for (var i = 0; i < 11; i++) {
+        //     document.querySelectorAll('div')[i].innerText = '짱구';
+        // }
+        // document.querySelector('changBtn2')
+        //     .addEventListener('click', function){
+        //     var divs = document.querySelectorAll('div');
+        //     console.log();
 
+        // }
 
+      
     </script>
 </body>
+
 </html>
