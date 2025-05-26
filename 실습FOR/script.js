@@ -1,14 +1,40 @@
 ﻿
 
 var key = 185;
-var num = num;
+// 키 값 185
 
-var  update = function(){
-	console.log('')
-	var height = document.querySelector()
-	height.innerText = key + 'CM';
-	
+function update() {
+  var heightBox = document.getElementById('height');
+  var leg = document.getElementById('leg');
+  var face = document.getElementById('face');
+
+  heightBox.innerText = key + 'CM';
+  leg.style.height = key + 'px';
+
+  if (key <= 160) {
+    face.classList.add('cry');
+    face.innerText = '';
+  } else {
+    face.classList.remove('cry');
+    face.innerText = '';
+  }
 }
+
+update();
+
+document.getElementById('arr-top').addEventListener('click', function (e) {
+  e.preventDefault();
+  key += 5;
+  update();
+});
+
+document.getElementById('arr-bottom').addEventListener('click', function (e) {
+  e.preventDefault();
+  for (var i = 0; i < 1; i++) {
+    key -= 5;
+  }
+  update();
+});
 
 
 /*

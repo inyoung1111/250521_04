@@ -33,29 +33,74 @@ var pokeName = [
 	document.getElementById('name2'),
 	document.getElementById('name3'),
 ];
+
 var pokeLevel = [
 	document.getElementsByClassName('level1'),
 	document.getElementsByClassName('level2'),
 	document.getElementsByClassName('level3'),
 ];
+//getElementsByClassName 왜 배열로 가져와 지는가?
+//배열안에 담겨서 가져와진다
+
 var pokeImg = [
 	document.getElementsByClassName('cha1'),
 	document.getElementsByClassName('cha2'),
 	document.getElementsByClassName('cha3'),
 ];
 
+
+//  0번째 클릭 했을 때 
+//pokeLevel 0번째 
 pokeImg[0][0].addEventListener('click', function(){
 	var currentLv = pokeLevel[0][0].innerHTML;
 	pokeLevel[0][0].innerHTML = parseInt(currentLv) +5;
 
 	if(parseInt(pokeLevel [0][0].innerHTML) >= 20){
-		pokeImg[0][0].src = 'icon01_3.png';
-		pokeName[0].innerHTML = '이상해꽃';
+		pokeImg[0][0].src = 'icon01_2.png';
+		pokeName[0].innerHTML = '이상해풀';
 
-	}else if(parseInt(pokeLevel[0][0].innerHTML)>= 0){
-		pokeImg[0][0].src ='icon01_2.png';
-		pokeName[0].innerHTML ='이상해풀';
+	}else if(parseInt(pokeLevel[0][0].innerHTML)>= 20){
+		pokeImg[0][0].src ='icon01_3.png';
+		pokeName[0].innerHTML ='이상해꽃';
 	}
 
 });
 
+pokeImg[1][0].addEventListener('click', function(){
+	var currentLv = pokeLevel[1][0].innerHTML;
+	pokeLevel[1][0].innerHTML = parseInt(currentLv) +5;
+
+	if(parseInt(pokeLevel [1][0].innerHTML) >= 20){
+		pokeImg[1][0].src = 'icon02_3.png';
+		pokeName[1].innerHTML = '리자몽';
+
+	}else if(parseInt(pokeLevel[1][0].innerHTML)>= 20){
+		pokeImg[1][0].src ='icon02_2.png';
+		pokeName[1].innerHTML ='리자드';
+	}
+
+});
+
+
+pokeImg[2][0].addEventListener('click', function(){
+	var currentLv = pokeLevel[2][0].innerHTML;
+	pokeLevel[2][0].innerHTML = parseInt(currentLv) +5;
+
+	if(parseInt(pokeLevel [2][0].innerHTML) >= 20){
+		pokeImg[2][0].src = 'icon03_3.png';
+		pokeName[2].innerHTML = '거북왕';
+
+	}else if(parseInt(pokeLevel[2][0].innerHTML)>= 20){
+		pokeImg[2][0].src ='icon03_2.png';
+		pokeName[2].innerHTML ='어니부기';
+	}
+
+	if(
+		pokeName[0].innerHTML ==  '이상해꽃' &&
+		pokeName[1].innerHTML ==  '리자몽' &&
+		pokeName[2].innerHTML ==  '거북왕'
+	){
+		document.getElementsByClassName('logo')[0].src = 'logo2.png';
+		}
+
+});
