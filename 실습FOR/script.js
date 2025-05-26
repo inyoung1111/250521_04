@@ -1,40 +1,77 @@
 ﻿
 
+// var key = 185;
+// // 키라는 변수 생성 값 185
+
+// function update() {
+//   var heightBox = document.getElementById('height');
+//   var leg = document.getElementById('leg');
+//   var face = document.getElementById('face');
+
+//   heightBox.innerText = key + 'CM';
+//   leg.style.height = key + 'px';
+// 	// key + 'px' 문자열이 된다
+// 	//style 바꾸고 
+//   if (key <= 160) { // <= 작거나 같다 160
+//     face.classList.add('cry'); 
+//     face.innerText = ''; // innerText 내용을 읽거나 바꿀 때 
+//   } else {
+//     face.classList.remove('cry'); //cry 클라스 이름을 지움
+//     face.innerText = ''; //리셋하는 역할?
+//   }
+// }
+
+// update();
+// // getElementById 하나의 속성 id arr-top가져옴 addEventListener 클릭하면 이벤트 실행
+// document.getElementById('arr-top').addEventListener('click', function (e) {
+//   e.preventDefault();
+//   key += 5; //5증가
+//   update();
+// });
+
+// document.getElementById('arr-bottom').addEventListener('click', function (e) {
+//   e.preventDefault();
+//   for (var i = 0; i < 1; i++) {
+//     key -= 5;
+//   }
+//   update();
+// });
+
 var key = 185;
-// 키 값 185
 
-function update() {
-  var heightBox = document.getElementById('height');
-  var leg = document.getElementById('leg');
-  var face = document.getElementById('face');
-
-  heightBox.innerText = key + 'CM';
-  leg.style.height = key + 'px';
-
-  if (key <= 160) {
-    face.classList.add('cry');
-    face.innerText = '';
-  } else {
-    face.classList.remove('cry');
-    face.innerText = '';
-  }
+function update(){
+	document.getElementById('height').innerHTML = key +'CM';
+	document.getElementById('leg').style.height = key +'px';
 }
+if(key <= 160){
+	document.getElementById('face').classList.add('cry')
+}else{
+	document.getElementById('face').classList.remove('cry')
+}
+
+document.getElementById('arr=top')
+.addEventListener('click', function()
+{
+	key = key + 1;
+	update()
+})
+
+document.getElementById('arr-bottom')
+.addEventListener('click',function(){
+	for(var i=0; i<2; i++){
+		key = key -i ; // 185 - 2 183 - 3 180
+
+	}
+	update()
+})
 
 update();
 
-document.getElementById('arr-top').addEventListener('click', function (e) {
-  e.preventDefault();
-  key += 5;
-  update();
-});
 
-document.getElementById('arr-bottom').addEventListener('click', function (e) {
-  e.preventDefault();
-  for (var i = 0; i < 1; i++) {
-    key -= 5;
-  }
-  update();
-});
+
+
+
+
 
 
 /*
